@@ -11,20 +11,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
   profiles:
     active: native
-  cloud:
-    bus:
-      trace:
-        enabled: true
-      enabled: true
-    config:
-      label: master
-      profile: dev
-      uri: http://localhost:8083/
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
+
 
 
 eureka:
