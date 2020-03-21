@@ -1,0 +1,43 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8083
+spring:
+  application:
+    name: config-server
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  #rabbitmq:
+   # host: localhost
+    #port: 5672
+    #username: guest
+    #password: guest
+  cloud:
+    bus:
+      trace:
+        enabled: true
+      enabled: true
+    config:
+      label: master
+      server:
+        git:
+          username:
+          password:
+          uri: https://github.com/startforever/cloud-bus/
+         # search-paths: repos
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+
+
